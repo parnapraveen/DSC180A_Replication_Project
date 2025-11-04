@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 # DSC180A_Replication_Project - Parna Praveen
 
 # Life Sciences Knowledge Graph Agent
 # 🧬 Helix Navigator
-=======
-# Helix Navigator
->>>>>>> 11bb828 (Update AI model references and enhance UI elements in Helix Navigator)
 
 **Learn LangGraph and Knowledge Graphs through Biomedical AI**
 
