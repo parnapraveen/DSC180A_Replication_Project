@@ -102,6 +102,22 @@ pdm run lint            # Check quality
 - **"Which genes are linked to multiple disease categories?"**
 - **"What proteins have causal associations with diseases?"** 
 
+## Evaluation Module
+
+To evaluate the workflow agent:
+
+```bash
+pdm run python src/agents/evaluation_metrics.py
+```
+
+Expected output:
+
+```
+classification_accuracy: 0.85
+entity_accuracy: 0.78
+answer_accuracy: 0.81
+```
+
 ## License
 
 MIT License

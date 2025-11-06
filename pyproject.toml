@@ -18,6 +18,7 @@ dependencies = [
     "pydantic>=2.5.3",
     "networkx>=3.0",
     "langgraph-cli[inmem]>=0.3.3",
+    "tqdm>=4.66.1",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -44,6 +45,7 @@ test = "pytest tests/ -v"
 format = {shell = "black . && isort ."}
 lint = {shell = "flake8 . && mypy ."}
 langgraph = {shell = "langgraph dev --config langgraph-studio/langgraph.json"}
+evaluate = {shell = "PYTHONPATH=. python src/agents/evaluation_metrics.py"}
 
 [build-system]
 requires = ["pdm-backend"]

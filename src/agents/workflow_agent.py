@@ -206,25 +206,37 @@ Respond with just the type."""
         relationship_types_str = ", ".join(self.schema.get("relationship_types", []))
 
         prompt = (
-            f"""Extract biomedical terms and concepts from this question """
-            f"""based on the database schema:
+            f"""You are an expert in biomedical knowledge graphs. Extract specific, concrete biomedical entities and property values directly mentioned in the user's question.
 
-Available entity types: {entity_types_str}
-Available relationships: {relationship_types_str}
+Only extract terms that would serve as direct values or filters in a database query.
 
-Available property values in database:
-{chr(10).join(property_info) if property_info else "- No property values available"}
+Examples of terms to extract:
+- Specific names of entities (e.g., "Hypertension", "Lisinopril", "Breast Cancer", "TP53")
+- Explicit property values (e.g., "approved", "common", "severe", "small molecule", "oncology", "cardiovascular")
+
+Do NOT extract:
+- General entity types (e.g., "Gene", "Disease", "Drug", "Protein")
+- Relationship concepts (e.g., "treats", "associated with", "targets", "encodes", "linked to")
+- Property names (e.g., "category", "mechanism", "molecular weight", "approval status", "type")
+- Question words or phrases that don't refer to specific data points (e.g., "what", "which", "list", "how many")
 
 Question: {state['user_question']}
 
-Extract ALL relevant terms including:
-- Specific entity names mentioned
-- Entity types referenced
-- Property values or constraints
-- Relationship concepts
-- General biomedical concepts
+Return a JSON list of strings. If no relevant entities or property values are found, return an empty list.
 
-Return a JSON list: ["term1", "term2"] or []"""
+Example:
+User Question: "Which approved drugs treat cardiovascular diseases?"
+Extracted Entities: ["approved", "cardiovascular diseases"]
+
+Example:
+User Question: "What genes are linked to breast cancer?"
+Extracted Entities: ["breast cancer"]
+
+Example:
+User Question: "What diseases are common and severe?"
+Extracted Entities: ["common", "severe"]
+
+Respond with just the JSON list of extracted entities."""
         )
 
         try:
