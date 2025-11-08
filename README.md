@@ -111,15 +111,15 @@ pdm run lint            # Check quality
 
 Measures how well the agent identifies the intent of the user's question (e.g., distinguishing between gene-disease queries vs. drug-treatment queries). High classification accuracy ensures the agent follows the correct workflow path from the start.
 
-#### Entity Accuracy - 
+#### Entity Accuracy
 
 Measures how accurately the agent extracts key biomedical terms (e.g., "Hypertension," "Lisinopril," "Breast Cancer") from questions. This is foundational—if entities aren't correctly identified, the agent cannot construct precise database queries.
 
-#### Answer Accuracy - 
+#### Answer Accuracy
 
 Measures how well the agent's final generated answer matches the expected factual outcome. This is the ultimate end-to-end performance measure, confirming whether the entire workflow (classification → extraction → query generation → execution → formatting) produces correct results.
 
-#### Average Query Duration - 
+#### Average Query Duration 
 
 Measures the time taken to execute each query, providing insight into system efficiency and user experience. This metric is critical for evaluating real-world performance and scalability.
 
