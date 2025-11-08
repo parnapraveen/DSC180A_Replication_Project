@@ -107,7 +107,7 @@ pdm run lint            # Check quality
 
 ### The system evaluates AI agent performance using four key metrics:
 
-#### Classification Accuracy - 
+#### Classification Accuracy
 
 Measures how well the agent identifies the intent of the user's question (e.g., distinguishing between gene-disease queries vs. drug-treatment queries). High classification accuracy ensures the agent follows the correct workflow path from the start.
 
