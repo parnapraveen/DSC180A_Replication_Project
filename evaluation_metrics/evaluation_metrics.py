@@ -95,7 +95,7 @@ if __name__ == "__main__":
     workflow_agent = WorkflowAgent(graph_interface, os.getenv("ANTHROPIC_API_KEY"))
 
     # Initialize and run evaluator
-    evaluator = WorkflowEvaluator(workflow_agent, "data/golden_dataset.json")
+    evaluator = WorkflowEvaluator(workflow_agent, "evaluation_metrics/golden_dataset.json")
     metrics = evaluator.evaluate()
 
     for metric, value in metrics.items():

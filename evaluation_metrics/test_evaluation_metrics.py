@@ -5,14 +5,14 @@ from pathlib import Path
 import os
 import time
 
-from src.agents.evaluation_metrics import WorkflowEvaluator
+from evaluation_metrics.evaluation_metrics import WorkflowEvaluator
 from src.agents.workflow_agent import WorkflowAgent
 from src.agents.graph_interface import GraphInterface
 
 class TestWorkflowEvaluator(unittest.TestCase):
 
     def setUp(self):
-        self.dataset_path = Path("data/golden_dataset.json")
+        self.dataset_path = Path("evaluation_metrics/golden_dataset.json")
         self.mock_dataset_content = [
             {
                 "question": "What genes are associated with Hypertension?",
