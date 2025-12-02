@@ -98,8 +98,10 @@ if __name__ == "__main__":
     evaluator = WorkflowEvaluator(workflow_agent, "evaluation_metrics/golden_dataset.json")
     metrics = evaluator.evaluate()
 
-    for metric, value in metrics.items():
-        print(f"{metric}: {value:.2f}")
+    with open("evaluation_results", "w") as f:
+        for metric, value in metrics.items():
+            f.write(f"{metric}: {value:.2f}\n")
+            print(f"{metric}: {value:.2f}")
 
     # Close graph interface
     graph_interface.close()
