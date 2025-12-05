@@ -189,10 +189,10 @@ if __name__ == "__main__":
     
     # Save results
     print("\n" + "="*60)
-    print("Saving results to evaluation_results.txt")
+    print("Saving results to evaluation_metrics/evaluation_results.txt")
     print("="*60)
     
-    with open("evaluation_results.txt", "w") as f:
+    with open("evaluation_metrics/evaluation_results.txt", "w") as f:
         f.write("="*60 + "\n")
         f.write("EVALUATION RESULTS\n")
         f.write("="*60 + "\n\n")
