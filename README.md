@@ -294,17 +294,17 @@ The agent can answer questions such as:
 
 The following enhancements were added to the original project:
 
-**`evaluation_metrics/`** (at root level):
+**`evaluation_metrics/`** (**NEW** at root level):
 - `evaluation_metrics.py`: Main evaluation script that runs all four scenarios
 - `golden_dataset.json`: Benchmark dataset with multi-turn conversations
 - `evaluation_results.txt`: Output file with detailed metrics
 - `test_evaluation_metrics.py`: Unit tests for the evaluation module
 
-**`src/memory/`** (NEW - moved from root):
+**`src/memory/`** (**NEW**):
 - `__init__.py`: Module initialization
 - `memory_manager.py`: `MemoryManager` class for storing and formatting conversation history
 
-**`src/prompts/`** (NEW - moved from root):
+**`src/prompts/`** (**NEW**):
 - `__init__.py`: Module initialization
 - `classification_prompt.py`: CoT-enhanced prompt for question classification
 - `entity_extraction_prompt.py`: CoT-enhanced prompt for entity extraction
