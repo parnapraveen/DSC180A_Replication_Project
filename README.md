@@ -246,10 +246,6 @@ Measures how well the agent's final generated answer matches the expected factua
 ### Average Query Duration
 Measures the time taken to execute each query, providing insight into system efficiency and user experience.
 
-![Performance Comparison](figure/performance_comparison.pdf)
-
-*Figure 2: Performance comparison across four evaluation scenarios showing classification, entity, and answer accuracy metrics.*
-
 ### Latest Evaluation Results
 
 Results from the most recent evaluation run:
